@@ -1,9 +1,12 @@
 import {createRouter, createWebHistory} from "vue-router";
+import {authenticationGuard} from "../iam/services/authentication.guard.js";
+import SignInComponent from "../iam/pages/sign-in.component.vue";
+import SignUpComponent from "../iam/pages/sign-up.component.vue";
 
 const routes = [
     { path: '/sign-in',                 name: 'sign-in',    component: SignInComponent,             meta: { title: 'Sign-In' } },
     { path: '/sign-up',                 name: 'sign-up',    component: SignUpComponent,             meta: { title: 'Sign-Up' } },
-    { path: '/',                        name: 'default',    redirect: '/home'}
+    { path: '/',                        name: 'default',    redirect: '/sign-in'}
 ];
 
 const router = createRouter({

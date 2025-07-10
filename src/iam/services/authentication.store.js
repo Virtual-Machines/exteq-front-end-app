@@ -1,5 +1,7 @@
 import {SignUpResponse} from "../model/sign-up.response.js";
 import {SignInResponse} from "../model/sign-in.response.js";
+import {AuthenticationService} from "./authentication.service.js";
+import {defineStore} from "pinia";
 
 const authenticationService = new AuthenticationService();
 
